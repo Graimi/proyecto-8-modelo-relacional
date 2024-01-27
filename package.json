@@ -1,0 +1,25 @@
+{
+  "name": "proyecto-8-modelo-relacional",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "node --watch ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Graimi/proyecto-8-modelo-relacional.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Graimi/proyecto-8-modelo-relacional/issues"
+  },
+  "homepage": "https://github.com/Graimi/proyecto-8-modelo-relacional#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.1.1"
+  }
+}
