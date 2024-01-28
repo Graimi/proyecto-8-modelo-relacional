@@ -81,7 +81,7 @@ const Franchises = {
 [✅] Los códigos de red son correctos cuando hago peticiones (200 y 201 para objetos creados).<br>
 []  De cara a la relación entre modelos, en el README tendré explicados los endpoints que debo consumir para tener acceso a:<br>
 <ul>
-- [] Un endpoint GET que me permite recuperar un elemento de la colección A y traer los datos de los elementos de la colección B con los que esté relacionado.<br>
+- [✅] Un endpoint GET que me permite recuperar un elemento de la colección A y traer los datos de los elementos de la colección B con los que esté relacionado.<br>
 - [] Un endpoint GET que me permite recuperar un elemento de la colección B y los datos de un elemento de la colección A con el que esté relacionado.<br>
 - [] Un endpoint PUT que me permite añadir (o quitar si ya existe) un nuevo elemento B al array de elementos relacionado de un documento de la colección A.<br>
 - [] Un enpoint PUT que me permite cambiar o eliminar el campo de un documento de la colección B que apunta a un elemento de la colección A con el que está relacionado.<br>
@@ -117,7 +117,7 @@ const Franchises = {
 [✅] POST franchises<br>
 [✅] PUT franchises<br>
 [✅] DELETE franchises<br>
-[] GET sciFiartifact and franchise related<br>
+[✅] GET sciFiartifact and franchise related<br>
 [] GET franchise and sciFiartifacts related<br>
 [] PUT sciFiartifact and franchise related<br>
 [] PUT franchise and sciFiartifacts related<br>
@@ -133,7 +133,7 @@ const Franchises = {
 [✅] POST franchises<br>
 [✅] PUT franchises<br>
 [✅] DELETE franchises<br>
-[] GET sciFiartifact and franchise related<br>
+[✅] GET sciFiartifact and franchise related<br>
 [] GET franchise and sciFiartifacts related<br>
 [] PUT sciFiartifact and franchise related<br>
 [] PUT franchise and sciFiartifacts related<br>
