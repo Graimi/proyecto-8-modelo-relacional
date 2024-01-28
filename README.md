@@ -13,29 +13,29 @@ Endpoints para los artefactos de ciencia ficción<br>
 | HTTP Request | Endpoint           | Descripción                                    |
 | ------------ | ------------------ | ---------------------------------------------- |
 | GET          | /scifiartifacts    | Muestra todos los artefactos                   |
-| GET          | /scifiartifacts/id | Identifica un artefacto por su id y lo muestra |
+| GET          | /scifiartifacts/:id | Identifica un artefacto por su id y lo muestra |
 | POST         | /scifiartifacts    | Crea un nuevo artefacto                        |
-| PUT          | /scifiartifacts/id | Edita un artefacto                             |
-| DELETE       | /scifiartifacts/id | Borra un artefacto                             |
+| PUT          | /scifiartifacts/:id | Edita un artefacto                             |
+| DELETE       | /scifiartifacts/:id | Borra un artefacto                             |
 
 Endpoints para las franquicias<br>
 
 | HTTP Request | Endpoint       | Descripción                                      |
 | ------------ | -------------- | ------------------------------------------------ |
 | GET          | /franchises    | Muestra todas las franquicias                    |
-| GET          | /franchises/id | Identifica una franquicia por su id y la muestra |
+| GET          | /franchises/:id | Identifica una franquicia por su id y la muestra |
 | POST         | /franchises    | Crea una nueva franquicia                        |
-| PUT          | /franchises/id | Edita una franquicia                             |
-| DELETE       | /franchises/id | Borra una franquicia                             |
+| PUT          | /franchises/:id | Edita una franquicia                             |
+| DELETE       | /franchises/:id | Borra una franquicia                             |
 
 Endpoints para las relaciones<br>
 
 | HTTP Request | Endpoint                   | Descripción                                                                       |
 | ------------ | -------------------------- | --------------------------------------------------------------------------------- |
-| GET          | /populate/scifiartifact/id | Identifica un artefacto por su id y muestra las franquicias en las que aparece    |
-| GET          | /populate/franchise/id     | Identifica una franquicia por su id y muestra los artefactos que aparecen en ella |
-| PUT          | /populate/scifiartifact/id | Edita las relaciones entre un artefacto y la franquicia en la que aparece         |
-| PUT          | /populate/franchise/id     | Edita las relaciones entre una franquicia y los artefactos que aparecen en ella   |
+| GET          | /populated/scifiartifact/:id | Identifica un artefacto por su id y muestra las franquicias en las que aparece    |
+| GET          | /populated/franchise/:id     | Identifica una franquicia por su id y muestra los artefactos que aparecen en ella |
+| PUT          | /populated/scifiartifact/:id | Edita las relaciones entre un artefacto y la franquicia en la que aparece         |
+| PUT          | /populated/franchise/:id     | Edita las relaciones entre una franquicia y los artefactos que aparecen en ella   |
 
 ### MODELOS:
 
@@ -117,6 +117,10 @@ const Franchises = {
 [✅] POST franchises<br>
 [✅] PUT franchises<br>
 [✅] DELETE franchises<br>
+[] GET sciFiartifact and franchise related<br>
+[] GET franchise and sciFiartifacts related<br>
+[] PUT sciFiartifact and franchise related<br>
+[] PUT franchise and sciFiartifacts related<br>
 [] Enlaces realizados<br>
 <li> [] controllers → Conjunto de funcionalidades</li>
 [✅] GET all artifacts<br>
@@ -129,11 +133,17 @@ const Franchises = {
 [✅] POST franchises<br>
 [✅] PUT franchises<br>
 [✅] DELETE franchises<br>
+[] GET sciFiartifact and franchise related<br>
+[] GET franchise and sciFiartifacts related<br>
+[] PUT sciFiartifact and franchise related<br>
+[] PUT franchise and sciFiartifacts related<br>
 [] Enlaces realizados<br>
 <li> [] routes → Enrutado de la aplicación</li>
 [✅] index con el router scifiartifacts establecido<br>
 [✅] index con el router franchises establecido<br>
+[✅] index con el router populated establecido<br>
 [✅] scifiartifacts endpoints declarados<br>
 [✅] franchises endpoints declarados<br>
+[] populated endpoints declarados<br>
 [] Enlaces realizados<br>
 </ul>
