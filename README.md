@@ -10,32 +10,32 @@ https://localhost:4001/api
 
 Endpoints para los artefactos de ciencia ficción<br>
 
-| HTTP Request | Endpoint           | Descripción                                    |
-| ------------ | ------------------ | ---------------------------------------------- |
-| GET          | /scifiartifacts    | Muestra todos los artefactos                   |
+| HTTP Request | Endpoint            | Descripción                                    |
+| ------------ | ------------------- | ---------------------------------------------- |
+| GET          | /scifiartifacts     | Muestra todos los artefactos                   |
 | GET          | /scifiartifacts/:id | Identifica un artefacto por su id y lo muestra |
-| POST         | /scifiartifacts    | Crea un nuevo artefacto                        |
+| POST         | /scifiartifacts     | Crea un nuevo artefacto                        |
 | PUT          | /scifiartifacts/:id | Edita un artefacto                             |
 | DELETE       | /scifiartifacts/:id | Borra un artefacto                             |
 
 Endpoints para las franquicias<br>
 
-| HTTP Request | Endpoint       | Descripción                                      |
-| ------------ | -------------- | ------------------------------------------------ |
-| GET          | /franchises    | Muestra todas las franquicias                    |
+| HTTP Request | Endpoint        | Descripción                                      |
+| ------------ | --------------- | ------------------------------------------------ |
+| GET          | /franchises     | Muestra todas las franquicias                    |
 | GET          | /franchises/:id | Identifica una franquicia por su id y la muestra |
-| POST         | /franchises    | Crea una nueva franquicia                        |
+| POST         | /franchises     | Crea una nueva franquicia                        |
 | PUT          | /franchises/:id | Edita una franquicia                             |
 | DELETE       | /franchises/:id | Borra una franquicia                             |
 
 Endpoints para las relaciones<br>
 
-| HTTP Request | Endpoint                   | Descripción                                                                       |
-| ------------ | -------------------------- | --------------------------------------------------------------------------------- |
+| HTTP Request | Endpoint                     | Descripción                                                                       |
+| ------------ | ---------------------------- | --------------------------------------------------------------------------------- |
 | GET          | /populated/scifiartifact/:id | Identifica un artefacto por su id y muestra las franquicias en las que aparece    |
 | GET          | /populated/franchise/:id     | Identifica una franquicia por su id y muestra los artefactos que aparecen en ella |
+| PUT          | /populated/franchise/:id     | Edita con que artefactos guarda relación una franquicia                           |
 | PUT          | /populated/scifiartifact/:id | Edita las relaciones entre un artefacto y la franquicia en la que aparece         |
-| PUT          | /populated/franchise/:id     | Edita las relaciones entre una franquicia y los artefactos que aparecen en ella   |
 
 ### MODELOS:
 
@@ -83,7 +83,7 @@ const Franchises = {
 <ul>
 - [✅] Un endpoint GET que me permite recuperar un elemento de la colección A y traer los datos de los elementos de la colección B con los que esté relacionado.<br>
 - [✅] Un endpoint GET que me permite recuperar un elemento de la colección B y los datos de un elemento de la colección A con el que esté relacionado.<br>
-- [] Un endpoint PUT que me permite añadir (o quitar si ya existe) un nuevo elemento B al array de elementos relacionado de un documento de la colección A.<br>
+- [✅] Un endpoint PUT que me permite añadir (o quitar si ya existe) un nuevo elemento B al array de elementos relacionado de un documento de la colección A.<br>
 - [] Un enpoint PUT que me permite cambiar o eliminar el campo de un documento de la colección B que apunta a un elemento de la colección A con el que está relacionado.<br>
 </ul>
 </ul>
@@ -119,7 +119,7 @@ const Franchises = {
 [✅] DELETE franchises<br>
 [✅] GET sciFiartifact and franchise related<br>
 [✅] GET franchise and sciFiartifacts related<br>
-[] PUT sciFiartifact and franchise related<br>
+[✅] PUT to update SciFiArtifact's Franchise<br>
 [] PUT franchise and sciFiartifacts related<br>
 [] Enlaces realizados<br>
 <li> [] controllers → Conjunto de funcionalidades</li>
@@ -135,8 +135,8 @@ const Franchises = {
 [✅] DELETE franchises<br>
 [✅] GET sciFiartifact and franchise related<br>
 [✅] GET franchise and sciFiartifacts related<br>
+[✅] PUT to update SciFiArtifact's Franchise<br>
 [] PUT sciFiartifact and franchise related<br>
-[] PUT franchise and sciFiartifacts related<br>
 [] Enlaces realizados<br>
 <li> [] routes → Enrutado de la aplicación</li>
 [✅] index con el router scifiartifacts establecido<br>

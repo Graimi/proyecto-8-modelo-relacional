@@ -1,7 +1,7 @@
 const {
   getSciFiArtifactAndRelatedFromDB,
   getFranchiseAndRelatedFromDB,
-  //   updateSciFiArtifactAndRelatedInDB,
+  updateScifiArtifactsInFranchiseinDB,
   //   updateFranchiseAndRelatedInDB,
 } = require('../repositories/populated');
 
@@ -34,7 +34,7 @@ const getFranchiseAndRelated = async (req, res, next) => {
     description: franchiseAndRelated.description,
     genre: franchiseAndRelated.genre,
     establishedYear: franchiseAndRelated.establishedYear,
-    artifacts: franchiseAndRelated.artifacts.map(artifact => ({
+    artifacts: franchiseAndRelated.artifacts.map((artifact) => ({
       _id: artifact._id,
       name: artifact.name,
       description: artifact.description,
@@ -45,9 +45,16 @@ const getFranchiseAndRelated = async (req, res, next) => {
   res.status(200).json({ data: response });
 };
 
+const updateScifiArtifactsInFranchise = async (req, res, next) => {
+    const { id } = req.params;
+    const { artifacts } = req.body;
+    const franchiseUpdated = await updateScifiArtifactsInFranchiseinDB(id, { artifacts });
+    res.status(200).json({ data: franchiseUpdated });
+  };
+
 module.exports = {
   getSciFiArtifactAndRelated,
   getFranchiseAndRelated,
-  //   updateSciFiArtifactAndRelated,
+  updateScifiArtifactsInFranchise,
   //   updateFranchiseAndRelated,
 };
