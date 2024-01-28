@@ -1,6 +1,6 @@
 # Modelo relacional
 
-## PROYECTO 8: Modelo relacional - EN PROCESO
+## PROYECTO 8: Modelo relacional - FINALIZADO
 
 Crear otro servidor, pero esta vez con dos modelos de datos relacionados entre sí.
 
@@ -93,7 +93,7 @@ const Franchises = {
 ## Organización
 
 <ul>
-<li> [] README </li>
+<li> [✅] README </li>
 [✅] Añadir el endpoint correcto<br>
 [✅] Añadir los modelos correctos<br>
 [] Revisar que es correcto<br>
@@ -108,7 +108,7 @@ const Franchises = {
 <li> [✅] models → Modelos para representar la estructura de los datos</li>
 [✅] Modelo artefactos<br>
 [✅] Modelo franquicias<br>
-<li> [] repositories → Conjunto de funciones con las querys para traer la información</li>
+<li> [✅] repositories → Conjunto de funciones con las querys para traer la información</li>
 [✅] GET all artifacts<br>
 [✅] GET one artifacts<br>
 [✅] POST artifacts<br>
@@ -123,8 +123,8 @@ const Franchises = {
 [✅] GET franchise and sciFiartifacts related<br>
 [✅] PUT to change the franchise's sciFiartifact<br>
 [✅] PUT to update SciFiArtifact's Franchise<br>
-[] Enlaces realizados<br>
-<li> [] controllers → Conjunto de funcionalidades</li>
+[✅] Enlaces realizados<br>
+<li> [✅] controllers → Conjunto de funcionalidades</li>
 [✅] GET all artifacts<br>
 [✅] GET one artifacts<br>
 [✅] POST artifacts<br>
@@ -139,13 +139,13 @@ const Franchises = {
 [✅] GET franchise and sciFiartifacts related<br>
 [✅] PUT to change the franchise's sciFiartifact<br>
 [✅] PUT to update SciFiArtifact's Franchise<br>
-[] Enlaces realizados<br>
-<li> [] routes → Enrutado de la aplicación</li>
+[✅] Enlaces realizados<br>
+<li> [✅] routes → Enrutado de la aplicación</li>
 [✅] index con el router scifiartifacts establecido<br>
 [✅] index con el router franchises establecido<br>
 [✅] index con el router populated establecido<br>
 [✅] scifiartifacts endpoints declarados<br>
 [✅] franchises endpoints declarados<br>
-[] populated endpoints declarados<br>
-[] Enlaces realizados<br>
+[✅] populated endpoints declarados<br>
+[✅] Enlaces realizados<br>
 </ul>
