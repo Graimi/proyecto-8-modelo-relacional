@@ -7,12 +7,12 @@ const {
   deleteSciFiArtifact,
 } = require('../controllers/sciFiArtifacts');
 
-const router = express.Router();
+const sciFiArtifactsRouter = express.Router();
 
-router.get('/', getAllSciFiArtifacts);
-router.get('/:id', getSciFiArtifactsById);
-router.post('/', createSciFiArtifacts);
-router.put('/:id', updateSciFiArtifactById);
-router.delete('/:id', deleteSciFiArtifact);
+sciFiArtifactsRouter.get('/', getAllSciFiArtifacts);
+sciFiArtifactsRouter.get('/:id', getSciFiArtifactsById);
+sciFiArtifactsRouter.post('/', createSciFiArtifacts);
+sciFiArtifactsRouter.put('/:id', updateSciFiArtifactById);
+sciFiArtifactsRouter.delete('/:id', deleteSciFiArtifact);
 
-module.exports = router;
+module.exports = sciFiArtifactsRouter;

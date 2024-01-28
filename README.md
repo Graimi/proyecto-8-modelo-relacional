@@ -71,11 +71,11 @@ const Franchises = {
 [✅]  El servidor se conecta con una base de datos MongoDB en mi equipo local que corre en el puerto 27017.<br>
 [✅]  En el README del proyecto están definidos los endpoints que tengo a mi disposición.<br>
 <ul>
-- []  Hay un endpoint GET que me permite traer todos los documentos de un tipo de colección.<br>
-- []  Hay un endpoint GET que me permite traer un solo elemento por su id de una colección.<br>
-- []  Hay un endpoint POST que me permite crear un nuevo elemento en la colección correspondiente.<br>
-- []  Hay un endpoint PUT que me permite crear editar un elemento por su id en una colección.<br>
-- []  Hay un endpoint DELETE que me permite borrar un elemento por su id en una colección.<br>
+- [✅]  Hay un endpoint GET que me permite traer todos los documentos de un tipo de colección.<br>
+- [✅]  Hay un endpoint GET que me permite traer un solo elemento por su id de una colección.<br>
+- [✅]  Hay un endpoint POST que me permite crear un nuevo elemento en la colección correspondiente.<br>
+- [✅]  Hay un endpoint PUT que me permite crear editar un elemento por su id en una colección.<br>
+- [✅]  Hay un endpoint DELETE que me permite borrar un elemento por su id en una colección.<br>
 </ul>
 [✅] El servidor no se rompe si pido una URL no existente, es decir, dispone de un middleware para capturar errores 404 o rutas no encontradas.<br>
 [✅] Los códigos de red son correctos cuando hago peticiones (200 y 201 para objetos creados).<br>
@@ -103,25 +103,37 @@ const Franchises = {
 <li> [✅] config → Archivos con configuraciones</li>
 [✅] Configuración establecida<br>
 [✅] Si no funciona recuerda probar la otra ruta<br>
-<li> [] models → Modelos para representar la estructura de los datos</li>
+<li> [✅] models → Modelos para representar la estructura de los datos</li>
 [✅] Modelo artefactos<br>
-[] Modelo franquicias<br>
+[✅] Modelo franquicias<br>
 <li> [] repositories → Conjunto de funciones con las querys para traer la información</li>
-[] GET all<br>
-[] GET one<br>
-[] POST<br>
-[] PUT<br>
-[] DELETE <br>
+[✅] GET all artifacts<br>
+[✅] GET one artifacts<br>
+[✅] POST artifacts<br>
+[✅] PUT artifacts<br>
+[✅] DELETE artifacts<br>
+[✅] GET all franchises<br>
+[✅] GET one franchises<br>
+[✅] POST franchises<br>
+[✅] PUT franchises<br>
+[✅] DELETE franchises<br>
 [] Enlaces realizados<br>
 <li> [] controllers → Conjunto de funcionalidades</li>
-[] GET all<br>
-[] GET one<br>
-[] POST<br>
-[] PUT<br>
-[] DELETE <br>
+[✅] GET all artifacts<br>
+[✅] GET one artifacts<br>
+[✅] POST artifacts<br>
+[✅] PUT artifacts<br>
+[✅] DELETE artifacts<br>
+[✅] GET all franchises<br>
+[✅] GET one franchises<br>
+[✅] POST franchises<br>
+[✅] PUT franchises<br>
+[✅] DELETE franchises<br>
 [] Enlaces realizados<br>
 <li> [] routes → Enrutado de la aplicación</li>
-[] index con el router establecido<br>
-[] archivo con los endpoints declarados<br>
+[✅] index con el router scifiartifacts establecido<br>
+[✅] index con el router franchises establecido<br>
+[✅] scifiartifacts endpoints declarados<br>
+[✅] franchises endpoints declarados<br>
 [] Enlaces realizados<br>
 </ul>
