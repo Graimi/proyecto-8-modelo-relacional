@@ -4,7 +4,7 @@
 
 Crear otro servidor, pero esta vez con dos modelos de datos relacionados entre sí.
 
-### Endpoints:
+### ENDPOINTS:
 
 https://localhost:4001/api
 
@@ -20,22 +20,22 @@ Endpoints para los artefactos de ciencia ficción<br>
 
 Endpoints para las franquicias<br>
 
-| HTTP Request | Endpoint      | Descripción                                      |
-| ------------ | ------------- | ------------------------------------------------ |
-| GET          | /franchise    | Muestra todas las franquicias                    |
-| GET          | /franchise/id | Identifica una franquicia por su id y la muestra |
-| POST         | /franchise    | Crea una nueva franquicia                        |
-| PUT          | /franchise/id | Edita una franquicia                             |
-| DELETE       | /franchise/id | Borra una franquicia                             |
+| HTTP Request | Endpoint       | Descripción                                      |
+| ------------ | -------------- | ------------------------------------------------ |
+| GET          | /franchises    | Muestra todas las franquicias                    |
+| GET          | /franchises/id | Identifica una franquicia por su id y la muestra |
+| POST         | /franchises    | Crea una nueva franquicia                        |
+| PUT          | /franchises/id | Edita una franquicia                             |
+| DELETE       | /franchises/id | Borra una franquicia                             |
 
 Endpoints para las relaciones<br>
 
-| HTTP Request | Endpoint      | Descripción                                      |
-| ------------ | ------------- | ------------------------------------------------ |
-| GET          | /franchise    | Muestra todas las franquicias                    |
-| GET          | /franchise/id | Identifica una franquicia por su id y la muestra |
-| PUT         | /franchise    | Crea una nueva franquicia                        |
-| PUT          | /franchise/id | Edita una franquicia                             |
+| HTTP Request | Endpoint                   | Descripción                                                                       |
+| ------------ | -------------------------- | --------------------------------------------------------------------------------- |
+| GET          | /populate/scifiartifact/id | Identifica un artefacto por su id y muestra las franquicias en las que aparece    |
+| GET          | /populate/franchise/id     | Identifica una franquicia por su id y muestra los artefactos que aparecen en ella |
+| PUT          | /populate/scifiartifact/id | Edita las relaciones entre un artefacto y la franquicia en la que aparece         |
+| PUT          | /populate/franchise/id     | Edita las relaciones entre una franquicia y los artefactos que aparecen en ella   |
 
 ### MODELOS:
 
@@ -55,7 +55,7 @@ const SciFiArtifacts = {
 Modelo para las franquicias
 
 ```jsx
-const Franchise = {
+const Franchises = {
   _id: 'id de la franquicia',
   name: 'Nombre de la franquicia',
   genre: 'Género de la franquicia',
@@ -92,8 +92,9 @@ const Franchise = {
 
 <ul>
 <li> [] README </li>
-[] Añadir el endpoint correcto<br>
+[✅] Añadir el endpoint correcto<br>
 [✅] Añadir los modelos correctos<br>
+[] Revisar que es correcto<br>
 <li> [] index → Almacenar archivos que actúan como puntos de entrada o partes del sistema</li>
 [] Middleware declarado<br>
 [] Middleware para errores declarado<br>
@@ -103,7 +104,8 @@ const Franchise = {
 [] Configuración establecida<br>
 [] Si no funciona recuerda probar la otra ruta<br>
 <li> [] models → Modelos para representar la estructura de los datos</li>
-[] Modelo establecido<br>
+[] Modelo artefactos<br>
+[] Modelo franquicias<br>
 <li> [] repositories → Conjunto de funciones con las querys para traer la información</li>
 [] GET all<br>
 [] GET one<br>
