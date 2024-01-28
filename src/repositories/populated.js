@@ -3,14 +3,20 @@ const { SciFiArtifact, Franchise } = require('../../src/models/mongo');
 const getSciFiArtifactAndRelatedFromDB = async (id) => {
   const sciFiArtifact = await SciFiArtifact.findById(id).populate({
     path: 'franchiseId',
-    select: 'name genre establishedYear artifacts',
   });
   return sciFiArtifact;
 };
 
+const getFranchiseAndRelatedFromDB = async (id) => {
+  const franchise = await Franchise.findById(id).populate({
+    path: 'artifacts',
+  });
+  return franchise;
+};
+
 module.exports = {
   getSciFiArtifactAndRelatedFromDB,
-  //   getFranchiseAndRelatedFromDB,
+  getFranchiseAndRelatedFromDB,
   //   updateSciFiArtifactAndRelatedInDB,
   //   updateFranchiseAndRelatedInDB,
 };
