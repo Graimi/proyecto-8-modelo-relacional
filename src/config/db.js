@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 const MONGO_PORT = 27017;
-const MONGO_DB = 'proyecto-7-API-rest';
+const MONGO_DB = 'proyecto-8-modelo-relacional';
 
 mongoose.set('strict', false);
 mongoose.set('strictQuery', false);
