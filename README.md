@@ -6,6 +6,10 @@ Crear otro servidor, pero esta vez con dos modelos de datos relacionados entre s
 
 ### Endpoints:
 
+https://localhost:4001/api
+
+Endpoints para los artefactos de ciencia ficción<br>
+
 | HTTP Request | Endpoint           | Descripción                                    |
 | ------------ | ------------------ | ---------------------------------------------- |
 | GET          | /scifiartifacts    | Muestra todos los artefactos                   |
@@ -14,24 +18,49 @@ Crear otro servidor, pero esta vez con dos modelos de datos relacionados entre s
 | PUT          | /scifiartifacts/id | Edita un artefacto                             |
 | DELETE       | /scifiartifacts/id | Borra un artefacto                             |
 
+Endpoints para las franquicias<br>
+
+| HTTP Request | Endpoint      | Descripción                                      |
+| ------------ | ------------- | ------------------------------------------------ |
+| GET          | /franchise    | Muestra todas las franquicias                    |
+| GET          | /franchise/id | Identifica una franquicia por su id y la muestra |
+| POST         | /franchise    | Crea una nueva franquicia                        |
+| PUT          | /franchise/id | Edita una franquicia                             |
+| DELETE       | /franchise/id | Borra una franquicia                             |
+
+Endpoints para las relaciones<br>
+
+| HTTP Request | Endpoint      | Descripción                                      |
+| ------------ | ------------- | ------------------------------------------------ |
+| GET          | /franchise    | Muestra todas las franquicias                    |
+| GET          | /franchise/id | Identifica una franquicia por su id y la muestra |
+| PUT         | /franchise    | Crea una nueva franquicia                        |
+| PUT          | /franchise/id | Edita una franquicia                             |
 
 ### MODELOS:
 
-Primer modelo
+Modelo para los artefactos de ciencia ficción
+
 ```jsx
-const sciFiArtifacts = {
+const SciFiArtifacts = {
   _id: 'id del artefacto',
   name: 'Nombre del artefacto',
-  universe: 'Universo al que pertenece',
   description: 'Descripción del artefacto y sus características',
   type: 'Tipo de artefacto',
   powers: 'Poderes o funcionalidades especiales del artefacto',
+  franchiseId: 'ID de la franquicia a la que pertenece',
 };
 ```
-Segundo modelo
-```jsx
-const  = {
 
+Modelo para las franquicias
+
+```jsx
+const Franchise = {
+  _id: 'id de la franquicia',
+  name: 'Nombre de la franquicia',
+  genre: 'Género de la franquicia',
+  establishedYear: 'Año de establecimiento de la franquicia',
+  artifacts: ['Array de ID de artefactos pertenecientes a la franquicia'],
 };
 ```
 
@@ -64,7 +93,7 @@ const  = {
 <ul>
 <li> [] README </li>
 [] Añadir el endpoint correcto<br>
-[] Añadir los modelos correctos<br>
+[✅] Añadir los modelos correctos<br>
 <li> [] index → Almacenar archivos que actúan como puntos de entrada o partes del sistema</li>
 [] Middleware declarado<br>
 [] Middleware para errores declarado<br>
