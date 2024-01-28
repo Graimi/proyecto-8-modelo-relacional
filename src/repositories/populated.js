@@ -14,6 +14,13 @@ const getFranchiseAndRelatedFromDB = async (id) => {
   return franchise;
 };
 
+const updateFranchiseofScifiArtifactInDB = async (id, payload) => {
+  const sciFiArtifact = await SciFiArtifact.findByIdAndUpdate(id, payload, {
+    new: true,
+  });
+  return sciFiArtifact;
+};
+
 const updateScifiArtifactsInFranchiseinDB = async (id, payload) => {
   const franchise = await Franchise.findByIdAndUpdate(id, payload, {
     new: true,
@@ -24,6 +31,6 @@ const updateScifiArtifactsInFranchiseinDB = async (id, payload) => {
 module.exports = {
   getSciFiArtifactAndRelatedFromDB,
   getFranchiseAndRelatedFromDB,
+  updateFranchiseofScifiArtifactInDB,
   updateScifiArtifactsInFranchiseinDB,
-  //   updateFranchiseAndRelatedInDB,
 };

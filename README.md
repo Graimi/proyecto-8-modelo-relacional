@@ -34,8 +34,10 @@ Endpoints para las relaciones<br>
 | ------------ | ---------------------------- | --------------------------------------------------------------------------------- |
 | GET          | /populated/scifiartifact/:id | Identifica un artefacto por su id y muestra las franquicias en las que aparece    |
 | GET          | /populated/franchise/:id     | Identifica una franquicia por su id y muestra los artefactos que aparecen en ella |
-| PUT          | /populated/franchise/:id     | Edita con que artefactos guarda relación una franquicia                           |
-| PUT          | /populated/scifiartifact/:id | Edita las relaciones entre un artefacto y la franquicia en la que aparece         |
+| PUT          | /populated/scifiartifact/:id | Edita con que franquicia guarda relación el artefacto a través de body params     |
+| PUT          | /populated/franchise/:id     | Edita con que artefactos guarda relación una franquicia a través de body params   |
+
+|
 
 ### MODELOS:
 
@@ -79,12 +81,12 @@ const Franchises = {
 </ul>
 [✅] El servidor no se rompe si pido una URL no existente, es decir, dispone de un middleware para capturar errores 404 o rutas no encontradas.<br>
 [✅] Los códigos de red son correctos cuando hago peticiones (200 y 201 para objetos creados).<br>
-[]  De cara a la relación entre modelos, en el README tendré explicados los endpoints que debo consumir para tener acceso a:<br>
+[✅]  De cara a la relación entre modelos, en el README tendré explicados los endpoints que debo consumir para tener acceso a:<br>
 <ul>
 - [✅] Un endpoint GET que me permite recuperar un elemento de la colección A y traer los datos de los elementos de la colección B con los que esté relacionado.<br>
 - [✅] Un endpoint GET que me permite recuperar un elemento de la colección B y los datos de un elemento de la colección A con el que esté relacionado.<br>
 - [✅] Un endpoint PUT que me permite añadir (o quitar si ya existe) un nuevo elemento B al array de elementos relacionado de un documento de la colección A.<br>
-- [] Un enpoint PUT que me permite cambiar o eliminar el campo de un documento de la colección B que apunta a un elemento de la colección A con el que está relacionado.<br>
+- [✅] Un enpoint PUT que me permite cambiar o eliminar el campo de un documento de la colección B que apunta a un elemento de la colección A con el que está relacionado.<br>
 </ul>
 </ul>
 
@@ -119,8 +121,8 @@ const Franchises = {
 [✅] DELETE franchises<br>
 [✅] GET sciFiartifact and franchise related<br>
 [✅] GET franchise and sciFiartifacts related<br>
+[✅] PUT to change the franchise's sciFiartifact<br>
 [✅] PUT to update SciFiArtifact's Franchise<br>
-[] PUT franchise and sciFiartifacts related<br>
 [] Enlaces realizados<br>
 <li> [] controllers → Conjunto de funcionalidades</li>
 [✅] GET all artifacts<br>
@@ -135,8 +137,8 @@ const Franchises = {
 [✅] DELETE franchises<br>
 [✅] GET sciFiartifact and franchise related<br>
 [✅] GET franchise and sciFiartifacts related<br>
+[✅] PUT to change the franchise's sciFiartifact<br>
 [✅] PUT to update SciFiArtifact's Franchise<br>
-[] PUT sciFiartifact and franchise related<br>
 [] Enlaces realizados<br>
 <li> [] routes → Enrutado de la aplicación</li>
 [✅] index con el router scifiartifacts establecido<br>
