@@ -1,9 +1,14 @@
 const express = require('express');
+require('dotenv').config();
 require('./config/db');
 // Creamos el soporte para peticiones
 const mainRouter = require('./routes/index');
+const connectDB = require('./config/db');
 
 const app = express();
+
+connectDB();
+
 app.use(express.json());
 
 // Creamos el middleware de las rutas en /api
