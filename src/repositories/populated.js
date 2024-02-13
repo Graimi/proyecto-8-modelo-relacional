@@ -14,17 +14,30 @@ const getFranchiseAndRelatedFromDB = async (id) => {
   return franchise;
 };
 
-const updateFranchiseofScifiArtifactInDB = async (id, payload) => {
-  const sciFiArtifact = await SciFiArtifact.findByIdAndUpdate(id, payload, {
-    new: true,
-  });
-  return sciFiArtifact;
+const updateScifiArtifactsInFranchiseinDB = async (id, payload) => {
+  const franchise = await Franchise.findByIdAndUpdate(
+    id,
+    payload,
+    {
+      new: true,
+    }
+  ).populate('artifacts');
+
+  return franchise;
 };
 
-const updateScifiArtifactsInFranchiseinDB = async (id, payload) => {
-  const franchise = await Franchise.findByIdAndUpdate(id, payload, {
-    new: true,
-  });
+const updateFranchiseofScifiArtifactInDB = async (id, payload) => {
+  const sciFiArtifact = await SciFiArtifact.findById(id).populate(
+    'franchiseId'
+  );
+  const franchise = await Franchise.findByIdAndUpdate(
+    sciFiArtifact.franchiseId.id,
+    payload,
+    {
+      new: true,
+    }
+  ).populate('artifacts');
+
   return franchise;
 };
 

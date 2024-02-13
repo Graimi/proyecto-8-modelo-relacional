@@ -30,14 +30,12 @@ Endpoints para las franquicias<br>
 
 Endpoints para las relaciones<br>
 
-| HTTP Request | Endpoint                     | Descripción                                                                       |
-| ------------ | ---------------------------- | --------------------------------------------------------------------------------- |
-| GET          | /populated/scifiartifact/:id | Identifica un artefacto por su id y muestra las franquicias en las que aparece    |
-| GET          | /populated/franchise/:id     | Identifica una franquicia por su id y muestra los artefactos que aparecen en ella |
-| PUT          | /populated/scifiartifact/:id | Edita con que franquicia guarda relación el artefacto a través de body params     |
-| PUT          | /populated/franchise/:id     | Edita con que artefactos guarda relación una franquicia a través de body params   |
-
-|
+| HTTP Request | Endpoint                     | Descripción                                                                                                                        |
+| ------------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| GET          | /populated/scifiartifact/:id | Identifica un artefacto por su id y muestra las franquicias en las que aparece                                                     |
+| GET          | /populated/franchise/:id     | Identifica una franquicia por su id y muestra los artefactos que aparecen en ella                                                  |
+| PUT          | /populated/franchise/:id     | A partir del id de la franquicia se declaran en el body los artefactos con la que esta guarda relación mostrando el conjunto final |
+| PUT          | /populated/scifiartifact/:id | A partir del id de un artefacto se editan los datos de su franquicia, mostrándolos posteriormente por pantalla                     |
 
 ### MODELOS:
 
